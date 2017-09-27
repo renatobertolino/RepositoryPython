@@ -1,5 +1,4 @@
 def write(string):
-
     file = open('crud.txt', 'r')
     text = file.read() + '\n' + string
     file.close()
@@ -7,6 +6,7 @@ def write(string):
     file = open('crud.txt', 'w')
     file.writelines(text)
     file.close()
+
 
 def delete_line(string):
     file = open('crud.txt', 'r')
@@ -17,6 +17,7 @@ def delete_line(string):
     file = open('crud.txt', 'w')
     file.write(str(text))
     file.close()
+
 
 x = input('Digite: ')
 delete_line(x)

@@ -9,6 +9,9 @@ def criar_tabela(nome_coluna, tipo_coluna, nome_tabela='tabela_1'):
     SQL = 'CREATE TABLE {} ({} {} PRIMARY KEY AUTOINCREMENT)'.format(nome_tabela, nome_coluna, tipo_coluna)
     cursor.execute(SQL)
 
+def adicionar_coluna(nova_coluna, tipo_coluna, nome_tabela='tabela_1'):
+    SQL = "ALTER TABLE {} ADD COLUMN '{}' {}".format(nome_tabela, nova_coluna,tipo_coluna)
+    cursor.execute(SQL)
 
 with sqlite3.connect('primeiro_db.sqlite') as conn:
     cursor = conn.cursor()
