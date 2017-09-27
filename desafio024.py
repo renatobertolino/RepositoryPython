@@ -1,20 +1,7 @@
-x = int(input('Primeiro valor:'))
-y = int(input('Segundo valor:'))
-z = int(input('Terceiro valor:'))
 
-menor = x
+list=[]
+list.append(input('Valor')*3)
+list.sort()
+print(list[0], list[-1])
 
-if y<x and y<z:
-    menor = y
-elif z<x and z<y:
-    menor = z
 
-print(menor)
-maior = x
-
-if y>x and y>z:
-    maior = y
-elif z>x and z>y:
-    maior = z
-
-print(maior)
